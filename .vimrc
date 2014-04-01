@@ -56,3 +56,9 @@ highlight Folded  guibg=#0A0A0A guifg=#9090D0
 " Numbers
 set number
 set numberwidth=5
+
+" Soft tabs
+set autoindent
+set expandtab
+set softtabstop=2
+set shiftwidth=2
