@@ -24,6 +24,15 @@ Plugin 'kien/ctrlp.vim'
 " Plugin 'file:///home/gmarik/path/to/plugin'
 
 filetype plugin indent on     " required
+
+" Make indentations 2 spaces
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+" Show cursor position all the time
+set ruler
+
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
