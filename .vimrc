@@ -71,3 +71,9 @@ set autoindent
 set expandtab
 set softtabstop=2
 set shiftwidth=2
+
+" Markdown support
+au BufRead,BufNewFile *.md set filetype=markdown
+
+" Better git commit messages
+autocmd Filetype gitcommit setlocal spell textwidth=72
