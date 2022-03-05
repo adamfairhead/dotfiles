@@ -2,4 +2,4 @@ Not a whole lot in here at the moment, just popping these here ahead of organizi
 
 ###### Notes
 * Set shell to zsh: "chsh -s /bin/zsh"
-* Setup Zundle: "git clone https://github.com/matschaffer/zundle.git ~/.zsh/bundle/zundle"
+* Uses Vundle for vim package management
