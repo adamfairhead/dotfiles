@@ -1,11 +1,11 @@
 set nocompatible
 
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " scripts on GitHub repos
 Plugin 'tpope/vim-fugitive'
@@ -23,12 +23,13 @@ Plugin 'kien/ctrlp.vim'
 " git repos on your local machine (i.e. when working on your own plugin)
 " Plugin 'file:///home/gmarik/path/to/plugin'
 
-filetype plugin indent on     " required
+filetype plugin indent on " required
 
 " Make indentations 2 spaces
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set mouse=a
 
 " Show cursor position all the time
 set ruler
@@ -52,13 +53,13 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
 
-Plugin 'croaky/vim-colors-github'
+Plugin 'preservim/nerdtree'
 
 " Set background color to white
 set t_Co=256
 
 " Color scheme
-colorscheme github
+colorscheme monokai
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
@@ -71,9 +72,12 @@ set autoindent
 set expandtab
 set softtabstop=2
 set shiftwidth=2
+set clipboard=unnamed
 
 " Markdown support
 au BufRead,BufNewFile *.md set filetype=markdown
 
 " Better git commit messages
 autocmd Filetype gitcommit setlocal spell textwidth=72
+
+call vundle#end()
