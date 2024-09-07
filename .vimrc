@@ -7,8 +7,14 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" vim-plug
+call plug#begin()
+Plug 'tpope/vim-sensible'
+Plug 'kblin/vim-fountain'
+call plug#end()
+
 " scripts on GitHub repos
-Plugin 'tpope/vim-fugitive'
+" Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-rails.git'
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -18,6 +24,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'L9'
 " Plugin 'FuzzyFinder'
 " scripts not on GitHub
+Plugin 'sickill/vim-monokai'
 Plugin 'kien/ctrlp.vim'
 " Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
@@ -55,10 +62,14 @@ endif
 
 Plugin 'preservim/nerdtree'
 
+" Open the existing NERDTree on each new tab.
+autocmd BufWinEnter * if &buftype != 'quickfix' && getcmdwintype() == '' | silent NERDTreeMirror | endif
+
 " Set background color to white
 set t_Co=256
 
 " Color scheme
+syntax enable
 colorscheme monokai
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0

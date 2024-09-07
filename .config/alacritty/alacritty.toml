@@ -1,0 +1,34 @@
+import = [ "~/.config/themes/tokyo-night/alacritty.toml" ]
+
+[env]
+  TERM = "xterm-256color"
+
+[shell]
+program = "/bin/zsh"
+args = ["-l", "-c", "zellij attach --index 0 --create"]
+
+[window]
+  padding.x = 10
+  padding.y = 10
+
+  dynamic_padding = true
+
+  dimensions.columns = 300
+  dimensions.lines = 80
+
+  decorations = "Buttonless"
+  opacity = 0.8
+  blur = true
+
+  option_as_alt = "Both"
+
+[font]
+  normal.family = "FiraCode Nerd Font"
+  normal.style = "Regular"
+  size = 12
+
+
+[keyboard]
+  bindings = [
+    { key = "3", mods = "Alt", chars = "#" },
+  ]
